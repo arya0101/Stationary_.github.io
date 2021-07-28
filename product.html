@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewpoint"content="widht=device-width, initial-scale=1.0">
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+  
+
+    <title>PRODUCT</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link href="navbar-top-fixed.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        
+a{
+ text-decoration: none;
+ background-color: transparent;
+ color:#000000;
+}
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: lightblue;
+  }
+}
+
+body {
+  background-color: #fcfcfc;
+  padding: 20px;
+  font-family: Arial;
+}
+
+/* Center website */
+.main {
+  max-width: 1000px;
+  margin: auto;
+}
+
+h1 {
+  font-size: 50px;
+  word-break: break-all;
+}
+
+.row {
+  margin: 10px -16px;
+}
+
+/* Add padding BETWEEN each column */
+.row,
+.row > .column {
+  padding: 8px;
+}
+
+/* Create four equal columns that floats next to each other */
+.column {
+  float: left;
+  width:25%;
+  display: none; /* Hide all elements by default */
+}
+
+/* Clear floats after rows */ 
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Content */
+.content {
+  background-color: white;
+  padding: 10px;
+  align-items: center;
+}
+
+/* The "show" class is added to the filtered elements */
+.show {
+  display: block;
+}
+.form-group{
+ 
+  color: rgb(255, 255, 255);
+}
+
+/* Style the buttons */
+.btn {
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  background-color: rgb(43, 119, 119);
+  cursor: pointer;
+  color: white;
+}
+
+.btn:hover {
+  background-color: rgb(43, 119, 119);
+  
+}
+
+.btn.active {
+  background-color: rgb(37, 168, 255);
+  color:azure;
+}
+
+.top{background-color: rgba(140, 199, 226, 0.856);
+  width:1000px;
+  padding: 55px;
+  margin:10px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+        .cart {
+            background-color: rgb(54, 54, 247);
+            border-radius: 5px;
+            color: rgb(47, 0, 255);
+            padding: 5px 10px;
+            text-align:left;
+
+            display: inline-block;
+            font-size: 10px;
+            text-decoration-color: white;
+            margin: 10px 30px;
+            cursor: pointer;
+        }
+  a:hover{color: #ededed;
+  }
+
+.container{width:90%;
+ margin:auto;
+ overflow:hidden;}
+
+</style>
+</head>
+<body>
+<header class="text-gray-600 body-font">
+  <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+    <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+      <img src="logo.png">
+      
+    </a>
+    <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
+      <a href="index.html"class="mr-5 hover:text-gray-900">HOME</a>
+      
+      <a href="product.html"class="mr-5 hover:text-gray-900">PRODUCT
+      </a>
+      <a href="#l"class="mr-5 hover:text-gray-900">CART</a>
+      
+     
+      <a href="#ContactUs"class="mr-5 hover:text-gray-900">CONTACT US</a>
+      <a href="#s"class="mr-5 hover:text-gray-900"><input type="text" placeholder="SEARCH..." name="search"></a>
+      
+    </nav>
+    <button class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0"> <a href="checkout.html"class="mr-5 hover:text-gray-900">CHECKOUT</a>
+      <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
+        <path d="M5 12h14M12 5l7 7-7 7"></path>
+      </svg>
+    </button>
+  </div>
+</header>
+  
+
+  
+     <!-- MAIN (Center website) -->
+<div class="main">
+    <div class="top">
+  
+  <h1><strong>We welcome you here</strong></h1>
+  <p>We have the best stationary items all in one place.</p>
+  </div>
+  <div id="myBtnContainer">
+  <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+  <button class="btn" onclick="filterSelection('Pens')">Pens</button>
+  <button class="btn" onclick="filterSelection(' Pencils')"> Pencils</button>
+  <button class="btn" onclick="filterSelection('Erasers')">Erasers </button>
+  <button class="btn" onclick="filterSelection('Markers')">Markers</button>
+  </div>
+
+ 
+ 
+  <div class="row">
+    <div class="column Pens">
+      <div class="content">
+        <img src="25.jpg" alt="Camera" style="width:100%">
+        <br><br>
+        <p><strong>Item 1</strong></p>
+        <p>Price:Rs..00</p>
+        <div class="form-group">
+                      
+        <input type="submit" name="Add to cart" class="btn btn-info btn-md" value="Add to cart">
+        </div>
+                           
+      </div>
+    </div>
+    <div class="column Pens">
+      <div class="content">
+      <img src="24.jpg" alt="Camera" style="width:100%">
+      <br><br>
+         <p><strong>Item 2</strong></p>
+        <p>Price:Rs..00</p>
+        <div class="form-group">
+                      
+          <input type="submit" name="Add to cart" class="btn btn-info btn-md" value="Add to cart">
+          </div>
+      </div>
+    </div>
+    <div class="column Pens">
+      <div class="content">
+      <img src="47.jpg" alt="Camera" style="width:100%">
+        <p><strong>Item 3</strong></p>
+        <p>Price:Rs..00</p>
+        <div class="form-group">
+                      
+          <input type="submit" name="Add to cart" class="btn btn-info btn-md" value="Add to cart">
+          </div>
+      </div>
+      </div>
+      <div class="column Pens">
+        <div class="content">
+        <img src="27.jpg" alt="Camera" style="width:100%">
+        <br><br>
+          <p><strong>Item 4</strong></p>
+          <p>Price:Rs..00</p>
+          <div class="form-group">
+                    
+            <input type="submit" name="Add to cart" class="btn btn-info btn-md" value="Add to cart">
+            </div>
+        </div>
+        </div>
+        <div class="row">
+          <div class="column Pencils">
+            <div class="content">
+              <img src="38.jpg" alt="Camera" style="width:100%">
+              <br><br><br><br><br>
+              <p><strong>Item 1</strong></p>
+              <p>Price:Rs..00</p>
+              <div class="form-group">
+                            
+              <input type="submit" name="Add to cart" class="btn btn-info btn-md" value="Add to cart">
+              </div>
+                                 
+            </div>
+          </div>
+          <div class="column Pencils">
+            <div class="content">
+            <img src="40.jpg" alt="Camera" style="width:100%">
+            <br><br><br><br>
+               <p><strong>Item 2</strong></p>
+              <p>Price:Rs..00</p>
+              <div class="form-group">
+                            
+                <input type="submit" name="Add to cart" class="btn btn-info btn-md" value="Add to cart">
+                </div>
+            </div>
+          </div>
+          <div class="column Pencils">
+            <div class="content">
+            <img src="36.jpg" alt="Camera" style="width:100%">
+              <p><strong>Item 3</strong></p>
+              
+              <p>Price:Rs..00</p>
+              <div class="form-group">
+                            
+                <input type="submit" name="Add to cart" class="btn btn-info btn-md" value="Add to cart">
+                </div>
+            </div>
+            </div>
+            <div class="column Pencils">
+              <div class="content">
+              <img src="45.jpeg" alt="Camera" style="width:100%">
+              <br><br><br> <br><br><br>
+                <p><strong>Item 4</strong></p>
+                <p>Price:Rs..00</p>
+                <div class="form-group">
+                          
+                  <input type="submit" name="Add to cart" class="btn btn-info btn-md" value="Add to cart">
+                  </div>
+              </div>
+              </div>
+
+        <div class="column Erasers">
+          <div class="content">
+            <img src="23.jpg" alt="Watches" style="width:100%">
+            <br> <p><strong>Item 1</strong></p>
+            <p>Price:Rs..00</p>
+            <div class="form-group">
+                          
+              <input type="submit" name="Add to cart" class="btn btn-info btn-md" value="Add to cart">
+              </div>
+          </div>
+        </div>
+        <div class="column Erasers">
+          <div class="content">
+          <img src="32.jpg" alt="Watches" style="width:100%">
+          <br><p><strong>Item 2</strong></p>
+            <p>Price:Rs..00</p>
+            <div class="form-group">
+                          
+              <input type="submit" name="Add to cart" class="btn btn-info btn-md" value="Add to cart">
+              </div>
+          </div>
+        </div>
+        <div class="column Erasers">
+          <div class="content">
+          <img src="31.jpg" alt="Watches" style="width:100%">
+          <br><br><br><br>
+           <p><strong>Item 3</strong></p>
+            <p>Price:Rs..00</p>
+            <div class="form-group">
+                          
+              <input type="submit" name="Add to cart" class="btn btn-info btn-md" value="Add to cart">
+              </div>
+          </div>
+        </div>
+        <div class="column Erasers">
+          <div class="content">
+          <img src="30.jpg" alt="Watches" style="width:100%">
+          <br><br><br>
+            <p><strong>Item 4</strong></p>
+            <p>Price:Rs..00</p>
+            <div class="form-group">
+                          
+              <input type="submit" name="Add to cart" class="btn btn-info btn-md" value="Add to cart">
+              </div>
+          </div>
+          </div>
+          <div class="column Markers">
+            <div class="content">
+              <img src="35.jpg" alt="shirt" style="width:100%">
+             <br><br> <p><strong><br>Item 1</strong></p>
+              <p>Price:Rs..00</p>
+              <div class="form-group">
+                            
+                <input type="submit" name="Add to cart" class="btn btn-info btn-md" value="Add to cart">
+                </div>
+            </div>
+          </div>
+          <div class="column Markers">
+            <div class="content">
+            <img src="28.jpg" alt="shirt" style="width:100%">
+               <p><strong>Item 2</strong></p>
+              <p>Price:Rs..00</p>
+              <div class="form-group">
+                            
+                <input type="submit" name="Add to cart" class="btn btn-info btn-md" value="Add to cart">
+                </div>
+            </div>
+          </div>
+          <div class="column Markers">
+            <div class="content">
+            <img src="33.jpg" alt="shirt" style="width:100%">
+             <p><strong>Item 3</strong></p>
+              <p>Price:Rs..00</p>
+              <div class="form-group">
+                            
+                <input type="submit" name="Add to cart" class="btn btn-info btn-md" value="Add to cart">
+                </div>
+            </div>
+          </div>
+          <div class="column Markers">
+            <div class="content">
+            <img src="34.jpg" alt="shirt" style="width:100%">
+              <p><strong>Item 4</strong></p>
+              <p>Price:Rs..00</p>
+              <div class="form-group">
+                            
+                <a href="Cartpage.html"> <input type="submit" name="Add to cart" class="btn btn-info btn-md" value="Add to cart">
+                </a></div>
+            </div>
+          </div>
+  </div>
+
+</div>
+      <!-- END GRID -->
+      </div>
+      <a name="ContactUs">
+      <section class="text-gray-600 body-font relative">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="flex flex-col text-center w-full mb-12">
+            <a name="abc"><h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Contact us</h1></a>
+            <p class="lg:w-2/3 mx-auto leading-relaxed text-base">We feel happy to help you.</p>
+          </div>
+          <div class="lg:w-1/2 md:w-2/3 mx-auto">
+            <div class="flex flex-wrap -m-2">
+              <div class="p-2 w-1/2">
+                <div class="relative">
+                  <label for="name" class="leading-7 text-sm text-gray-600">Name</label>
+                  <input type="text" id="name" name="name" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                </div>
+              </div>
+              <div class="p-2 w-1/2">
+                <div class="relative">
+                  <label for="email" class="leading-7 text-sm text-gray-600">Email</label>
+                  <input type="email" id="email" name="email" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                </div>
+              </div>
+              <div class="p-2 w-full">
+                <div class="relative">
+                  <label for="message" class="leading-7 text-sm text-gray-600">Message</label>
+                  <textarea id="message" name="message" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"></textarea>
+                </div></a>
+              </div>
+              <div class="p-2 w-full">
+                <button class="flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">Submit</button>
+              </div>
+              <div class="p-2 w-full pt-8 mt-8 border-t border-gray-200 text-center">
+                <a class="text-indigo-500">helpline@arsh.in</a>
+                <p class="leading-normal my-5">Hostel No. 26 Tiger road 
+                  <br>BIT Sindri,Dhanbad JH 828122.
+                </p>
+                <span class="inline-flex">
+                  <a class="text-gray-500">
+                    <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                      <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                    </svg>
+                  </a>
+                  <a class="ml-4 text-gray-500">
+                    <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                      <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+                    </svg>
+                  </a>
+                  <a class="ml-4 text-gray-500">
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                      <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                      <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+                    </svg>
+                  </a>
+                  <a class="ml-4 text-gray-500">
+                    <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                      <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"></path>
+                    </svg>
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    
+  
+      <!-- END MAIN -->
+      
+      
+      
+      <script>
+      filterSelection("all")
+      function filterSelection(c) {
+        var x, i;
+        x = document.getElementsByClassName("column");
+        if (c == "all") c = "";
+        for (i = 0; i < x.length; i++) {
+          w3RemoveClass(x[i], "show");
+          if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+        }
+      }
+      
+      function w3AddClass(element, name) {
+        var i, arr1, arr2;
+        arr1 = element.className.split(" ");
+        arr2 = name.split(" ");
+        for (i = 0; i < arr2.length; i++) {
+          if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+        }
+      }
+      
+      function w3RemoveClass(element, name) {
+        var i, arr1, arr2;
+        arr1 = element.className.split(" ");
+        arr2 = name.split(" ");
+        for (i = 0; i < arr2.length; i++) {
+          while (arr1.indexOf(arr2[i]) > -1) {
+            arr1.splice(arr1.indexOf(arr2[i]), 1);     
+          }
+        }
+        element.className = arr1.join(" ");
+      }
+      
+      
+      // Add active class to the current button (highlight it)
+      var btnContainer = document.getElementById("myBtnContainer");
+      var btns = btnContainer.getElementsByClassName("btn");
+      for (var i = 0; i < btns.length; i++) {
+        btns[i].addEventListener("click", function(){
+          var current = document.getElementsByClassName("active");
+          current[0].className = current[0].className.replace(" active", "");
+          this.className += " active";
+        });
+      }
+      </script>
+      
+ 
+</body>
+</html>
